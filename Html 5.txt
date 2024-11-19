@@ -1,0 +1,74 @@
+* Html 5:
+-----------
+
+* Html5 Canvas (4 points)
+	Methods used: 
+		getContext("2d")
+		stroke()   -> used to make the line visible
+		arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise)
+		rect(x, y, width, height)
+		fill()  ->context.fillStyle ="orange" and then run fill() method
+
+		var context = canvas.getContext("2d");
+        		context.rect(50, 50, 200, 100); 
+        		context.stroke();
+		
+* Html5 SVG graphics
+	Definition (4 points)
+	Advantages
+	Difference between SVG and Canvas
+
+	<svg width="300" height="200">
+   	<rect x="50" y="50" width="200" height="100" style="fill:orange; stroke:black; stroke-width:3;" />
+	</svg>
+
+* Html5 Audio (we can embed audio file in the html document)
+	Elements: <audio>, <source>, <object>, <embed>
+	Attributes: src, type, data, controls
+
+* Html5 Video (Similarly we can embed video file in the html document)
+	Elements: <video>, <object>, <embed>, <iframe>
+	Attributes: src, type, width, height, controls, autoplay, frameborder, allowfullscreen
+
+* Html5 Web storage
+	Definition
+	Difference between Web storage and Cookies
+	Types of Web storage: local storage, session storage.
+	localStorage.setItem(key, value), localStorage.getItem(key)
+	localStorage.removeItem("first_name")
+	localStorage.clear()
+	sessionStorage.setItem(key, value), sessionStorage.getItem(key)
+
+* Html5 Application Cache
+	Definition
+	Advantages (Offline browsing, Improves performance, Reduce Http request and server load)
+	Create a cache manifest file and use it in the html document
+
+* Html5 Web worker (to do background work independently of other user-interface scripts without affecting the performance of web page)
+	if (window.Worker)
+		var worker = new Worker(".js file")
+ 		worker.onmessage = function(event) {
+            		document.getElementById("result").innerHTML = event.data;
+        		};
+	If we want to terminate the web worker we can use worker.terminate()
+
+	Dedicated Workers - These are workers that are utilized by a single script.
+	Shared Workers -These are workers that are utilized by multiple scripts running in different windows, IFrames, etc.
+	Service Workers - These act as proxy servers between web applications, the browser, and the network. Mostly used for push notifications and sync APIs.
+	 
+* Html5 Server Sent Events (SSE)
+	Definition (3 points)
+	New way for the web pages to communicating to the web server.
+	The EventSource object is used to receive server-sent event messages.
+
+* Html5 Geolocation
+	Definition
+	Object: navigator.geolocation
+	methods: getCurrentPosition(), watchPosition(), clearWatch()
+
+* Html5 Drag and Drop
+	Definition
+	Events: ondragstart, ondragenter, ondragover, ondragleave, ondrag, ondrop, ondragend
+
+* New input types in HTML5 
+	color, email, number, search, url, date, month, tel.

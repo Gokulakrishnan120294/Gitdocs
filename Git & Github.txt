@@ -1,0 +1,106 @@
+Git & Github
+-----------------
+
+* What is Git ?
+
+* How it can be used in a project ?
+
+* Advantages of using VCS
+
+* What is distributed VCS ?
+
+* Advantages of distributed VCS
+
+
+
+* What is Github ?
+
+* Exploring Github (Code, README.md, Issues, Pull request, Projects, Wikis, Insights)
+
+* Github workflow (Master->Feature branch->add->commit->pull request->discuss&review->deploy->merge)
+
+* Continuous Integration, Continuous Delivery, Continuous Deployment
+
+* Understanding of how git works
+
+* Fast forward merge and Non fast forward merge
+
+* Merge conflicts and three ways to resolve it
+
+* Git commands:
+----------------------
+
+* git --version
+* git config --global user.name
+* git config --global user.email
+* git clone "url"
+* git branch <branchname>
+* git push
+* git checkout <branchname>
+* git status
+* git add <filename>
+* git commit -m "message"
+* git pull
+* git push --set-upstream origin <branchname> (need to set remote tracking branch)
+* git merge <branchname>
+* git branch -d <branchname> (deleting a branch)
+* git init <repositoryname> (creating a new repository)
+* git config --global alias.lol "log --oneline --decorate --all" (alias name will be git lol)
+* git bisect (to find the particular commit in the log)
+* git revert <commit id> (even after commit we can change the content of the file in the log)
+* git add -p <filename> (if we want to commit each changes seperately)
+* git reset --soft <commit id> (moves commits from history to staging area)
+* git reset --mixed <commit id> (moves commits from history to working directory)
+* git reset-hard <commit id> (moves the commit from history and push them into trash)
+* git reflog (represents HEAD and its tracker of where the HEAD has been)
+* git cherry-pick <commit id> (pull a particular commit from trash history to working file & create a new commit id)
+* git diff --color-words (changed content shown in colors instead of plus and minus)
+* git commit -am "message" (it commits all files directly from working area to repository)
+* git show <commit id> (to see the past commit changes we have done)
+* git diff <commit id>..<commit id> (compare the differences between two commits)
+* git checkout --<space><filename> (if some content was deleted by mistake in a file it can be undo)
+* git commit --amend -m "message" (it will take the last commit and add new stuff into it and recommiting it and generating a new SHA value)
+* git clean -f (to delete the untracked files in the working directory)
+* git branch --merged (list out all the branches merged with the master)
+* git branch --no-merged (list out number of branches that are not merged with master)
+* git stash save "filename" (it will add to the stash and can use it later)
+* git stash list (shows the list of everything in the stash)
+* git stash show stash@{0}
+* git stash show -p stash@{0} (to view the contents of the stash)
+* git stash pop (it will remove a single stash and it apply into our working directory)
+* git stash pop stash@{0}
+* git stash apply (similar to stash pop but it does not delete from the pop list when retriving)
+* git stash drop stash@{0} ( to delete a particular stash from the list)
+* git stash clear (it will clear all the stash from the list)
+* git remote (to check existing remote available)
+* git remote add origin https:// .git (to add our remote repository details to local repository)
+* git remote -v (to get more options on remote)
+* git remote rm origin (to remove the remote from local repository)
+* git push -u origin master (to push our master branch into remote repository)
+* git branch -r (it will show our remote branches)
+* git fetch (synchronize origin/master with the remote and also brings down any information about other branches that has been added to the remote repositories)
+* git push origin <branchname> (creating a branch in remote)
+* git push origin :<branchname> (deleting a remote branch)
+* git push origin --delete<branchname> (deleting a remote branch)
+
+
+
+* git log --oneline
+* git checkout -b <branchname> (create a new branch and checkout to same)
+* git diff (compare staging directory and working directory)
+* git diff --staged (compare between repository and staging directory)
+* git diff HEAD
+* git branch -m app1 app2 (changing the branch name from app1 to app2)
+* git config --list
+* git config --global core.editor "atom --wait" (we can choose the editor we want to use in git)
+* git config --global color.ui true (to use multicolor in git to understand different portions of text)
+* git log -n 5 (it will limit the number of commits)
+* git mv app1.txt app2.txt (it will rename the file from app1 to app2)
+* git rm <filename> (to delete the file) 
+* git log --grep=" ->"any words you want to search (globally search for regular expression)
+* git log --author="gokul" (limit the commit by author name)
+
+
+
+
+
